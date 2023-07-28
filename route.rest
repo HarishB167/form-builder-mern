@@ -1,0 +1,22 @@
+GET http://localhost:3000/users
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Mohan",
+    "age" : 25
+}
+###
+GET http://localhost:3000/users/64c3a14b87c6746757b1640c
+###
+DELETE http://localhost:3000/users/64c3a14b87c6746757b1640c
+###
+PUT http://localhost:3000/users/64c3a3f1afe34f20ff790737
+Content-Type: application/json
+
+{
+    "name": "Sohan",
+    "age" : 25
+}
