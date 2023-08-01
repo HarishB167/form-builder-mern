@@ -12,6 +12,8 @@ app.use(express.json());
 
 const usersRouter = require("./routes/users");
 app.use("/users", usersRouter);
+const formBuilderRouter = require("./routes/formBuilder");
+app.use("/formBuilder", formBuilderRouter);
 app.use(express.static("public"));
 
 app.listen(3000);
