@@ -18,7 +18,8 @@ const getForm = async (req, res, next) => {
 
 router.get("/", async (req, res) => {
   try {
-    const forms = await FormBuilder.find();
+    let forms = await FormBuilder.find();
+    forms = forms.map((item) => ({ _id: item._id, name: item.name }));
     res.json(forms);
   } catch (err) {
     res.status(500).json({ message: err.message });

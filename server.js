@@ -16,7 +16,7 @@ console.log("Allowed origins (CORS_ORIGINS) are : ", origins);
 const app = express();
 app.use(cors(origins));
 
-app.use(express.json());
+app.use(express.json({ limit: "50mb" }));
 
 const usersRouter = require("./routes/users");
 app.use("/users", usersRouter);
